@@ -1,0 +1,146 @@
+.intro {
+    position: relative;
+    z-index: 1;
+    background-image: url('../images/bg-01.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 0 65px;
+
+    @media (min-width: 768px) {
+        padding: 65px 0;
+    }
+
+    &:after {
+        @extend %wrapper-bg;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;  
+        }
+    }
+
+    &__form {
+        flex: 1 0 50%;
+
+        @media (min-width: 768px) {
+            padding: 0 45px 0 0;
+        }
+    }
+
+    &__present {
+        flex: 1 0 50%;
+        text-align: center;
+        padding: 5px 35px 0;
+        color: $white;
+
+        @media (min-width: 768px) {
+            align-self: flex-start;
+            padding: 95px 20px 0;
+            text-align: left;
+        }
+
+        @media (min-width: 992px) {
+            padding: 95px 50px 0;
+        }
+
+        &--title {
+            margin: 0;
+            text-transform: uppercase;
+            font-family: $opensans-font;
+            font-size: 30px;
+            line-height: 1.5;
+            font-weight: $bold;
+            padding:0 0 20px;
+
+            @media (min-width: 768px) {
+                font-size: 40px;
+                padding: 0 0 10px;
+            }
+
+            @media (min-width: 992px) {
+                font-size: 48px;
+                padding: 0 0 25px;
+            }
+        }
+
+        &--subtitle {
+            margin: 0;
+            font-family: $frees-font;
+            font-weight: $normal;
+            font-size: 28px;
+            padding: 0 25px 0;
+
+            @media (min-width: 768px) {
+                padding: 0 150px 0 0;
+            }
+
+            @media (min-width: 992px) {
+                font-size: 40px;
+                padding: 0 180px 0 0;
+            }
+        }
+    }
+}
+
+.form {
+    margin: 35px auto;
+    padding: 30px 30px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0px 8px 10px 0px $shadow;
+    background-color: $white;
+    font-family: $opensans-font;
+
+    @media (min-width: 768px) { 
+        margin:40px 0 40px  auto;
+    }
+
+    & > h2 {
+        margin: 0;
+        padding:0 0 30px;
+        font-size: 26px;
+        font-weight: $semibold;
+        color: $blue;
+        text-transform: uppercase;
+    }
+
+    &__name, &__phone, &__select {
+        margin: 0 0 15px;
+        padding: 20px 10px;
+        width: 100%;
+        font-size: 14px;
+        font-weight: $normal;
+        color: $form-text-cl;
+        border-radius: 8px;
+        background-color: $form-bg;
+        border: none;
+        outline: none;
+    }
+
+    &__btn {
+        display: block;
+        cursor: pointer;
+        margin-left: auto;
+        font-size: 16px;
+        font-weight: $bold;
+        color: $white;
+        padding: 15px 65px;
+        background-color: $default-blue;
+        border-radius: 8px;
+        border: none;
+        transition: all .5s linear;
+
+        &:hover {
+            background-color: $hover-btn;
+            box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+  

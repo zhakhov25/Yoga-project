@@ -1,0 +1,23 @@
+body {
+    min-width: 320px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    margin: 0 auto;     
+    max-width: 1170px;
+}
+
+.title-h2 {
+    margin: 0;
+    font-size: 30px;
+    font-family: $opensans-font;
+    color: $default-blue;
+    font-weight: $bold;
+    text-transform: uppercase;
+    line-height: 1.5;
+}

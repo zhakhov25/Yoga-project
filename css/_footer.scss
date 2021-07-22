@@ -1,0 +1,213 @@
+#footer {
+    background-color: $default-blue;
+    padding: 50px 15px;
+
+    @media (min-width: 768px) {
+        padding: 100px 15px 65px;
+    }
+
+    @media (min-width: 992px) {
+        padding: 95px 15px 85px;
+    }
+}
+
+.footer {
+    font-family: $opensans-font;
+    color: $white;
+
+    @media (min-width: 992px) {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__about, &__contact {
+            flex: 1 0 50%;
+        }
+
+        &__social {
+            flex: 1 0 100%; 
+        }
+    }
+
+    &__about {
+        padding: 0 0 30px;
+        
+        @media (min-width: 992px) {
+            padding: 0 75px 30px 0;
+        }
+
+        &--title {
+            @extend %footer-title;
+            padding-bottom: 35px;
+
+            @media (min-width: 768px) {
+                padding-bottom: 60px;
+            }
+        }
+    
+        &--text {
+            margin: 0;
+            font-size: 14px;
+            font-weight: $normal;
+        }
+    }
+
+    &__contact {
+        padding: 0 0 35px;
+
+        @media (min-width: 768px) {
+            padding: 0 0 5px; 
+        }
+
+        &--title {
+            @extend %footer-title;
+            padding-bottom: 35px;
+
+            @media (min-width: 768px) {
+                padding-bottom: 55px;
+            }
+        }
+    }
+
+    &__social {
+
+        @media (min-width: 768px) {
+            margin: 15px 0;
+        }
+
+        & > ul {
+            @extend %listreset;
+            & > li {
+                display: inline-block;
+                font-size: 0;
+                margin-right: 15px;
+
+                & > a {
+                    text-decoration: none;
+                    display: block;
+                    font-size: 18px;
+                    color: $white;
+                    transition: all .5s linear;
+
+                    @media (min-width: 992px) {
+                        font-size: 24px;
+                    }
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact__link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    @media (min-width: 768px) {
+        &--adress, &--mail, &--phone, &--site {
+            flex-basis: 50%;
+            padding: 0 0 25px 35px;
+        }
+    }
+
+    &--adress, &--mail, &--site {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &--adress {
+        @extend %footer-contact;
+
+        &:before {
+            content: '\e948';
+            @extend %icomoon-default;
+        }
+
+        & > p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: $normal;
+
+            &:first-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &--mail {
+        @extend %footer-contact;
+        font-size: 14px;
+        font-weight: $normal;
+
+        &:before {
+            content: '\e945';
+            @extend %icomoon-default;
+        }
+    }
+
+    &--phone {
+        @extend %footer-contact;
+        font-size: 14px;
+        font-weight: $normal;
+
+        & > a {
+            display: block;
+            text-decoration: none;
+            color: $white;
+            
+            &:first-child {
+                margin-bottom: 10px;
+            }
+
+            &:before {
+                content: '\e942';
+                @extend %icomoon-default;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &--site {
+        @extend %footer-contact;
+        font-size: 14px;
+        font-weight: $normal;
+
+        &:before {
+            content: '\eaa7';
+            @extend %icomoon-default;
+        }
+    }
+}
+
+.copyright {
+    padding: 45px 0;
+    text-align: center;
+    background-color: $copyright-bg;
+
+    @media (min-width: 768px) {
+        padding: 5px 0;
+    }
+
+    @media (min-width: 768px) {
+        padding: 25px 0;
+    }
+
+    & > p {
+        font-family: $opensans-font;
+        font-size: 16px;
+        font-weight: $normal;
+        color: $copyright-text;
+    }
+}
+
+
+

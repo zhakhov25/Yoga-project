@@ -1,0 +1,44 @@
+%listreset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// wrapper-bg
+
+%wrapper-bg {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(83, 99, 219, .8);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+// footer extend
+
+%footer-title {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: $bold;
+    margin: 0;
+}
+
+%footer-contact {
+    position: relative;
+    flex-basis: 100%;
+    text-decoration: none;
+    color: $white;
+    padding: 0 0 35px 35px;
+}
+
+%icomoon-default {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: $icomoon-font;
+    font-size: 18px;
+}

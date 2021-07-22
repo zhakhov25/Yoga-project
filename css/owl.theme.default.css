@@ -1,0 +1,105 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+  .owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px; }
+    .owl-theme .owl-nav [class*='owl-']:hover {
+      background: #869791;
+      color: #FFF;
+      text-decoration: none; }
+  .owl-theme .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px; }
+
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline; }
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px; }
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791; }
+
+#owl-dots .owl-prev {
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
+  transform: translateY(-50%);
+}
+
+#owl-dots .owl-prev:before {
+  content: '';
+  position: absolute;
+    display: block;
+    top: 50%;
+    left: 45%;
+    width: 20px;
+    height: 20px;
+    border-radius: 0 4px;
+    border-bottom: 4px solid #5b6ceb;
+    border-right: 4px solid #5b6ceb;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#owl-dots .owl-next {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
+  transform: translateY(-50%);
+}
+
+#owl-dots .owl-next:before {
+  content: '';
+  position: absolute;
+    display: block;
+    top: 50%;
+    left: 55%;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px 0;
+    border-bottom: 4px solid #5b6ceb;
+    border-left: 4px solid #5b6ceb;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+

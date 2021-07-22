@@ -1,0 +1,105 @@
+.price {
+    position: relative;
+    z-index: 1;
+    background-image: url('../images/bg-03.jpg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+
+    @media (min-width: 768px) {
+        padding: 50px 0 20px;
+    }
+
+    @media (min-width: 992px) {
+        padding: 100px 0 70px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 15px;
+
+        @media (min-width: 768px) {
+            justify-content: space-around;
+            padding: 0;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 30px;
+        max-width: 350px;
+        overflow: hidden;
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
+
+        & > a {
+            display: block;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 10px 0 55px;
+            font-weight: $bold;
+            color: $white;
+            padding: 15px 55px;
+            background-color: $default-blue;
+            border-radius: 20px;
+            transition: all .5s linear;
+            box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    
+            &:hover {
+                background-color: $hover-btn;
+            }
+        }
+    }
+
+    &__cost {
+        padding: 35px 0;
+        width: 100%;
+        text-align: center; 
+        text-transform: uppercase;
+        background-color: $default-blue;
+
+        & > h4 {
+            margin: 0;
+            font-size: 67px;
+            color: $white;
+            font-family: $opensans-font;
+            font-weight: $bold;
+
+            & > span {
+                font-size: 32px;
+                vertical-align: middle;
+            }
+
+            & >span:last-child {
+                vertical-align: bottom;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__details {
+        padding: 25px 0 0;
+
+        & > p {
+            margin: 0;
+            position: relative;
+            padding: 25px 0;
+            font-size: 18px;
+            font-weight: $normal;
+            font-family: $opensans-font;
+            color: $color-p;
+            border-bottom: 1px solid $border-color;
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}

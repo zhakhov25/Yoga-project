@@ -1,0 +1,129 @@
+.header {
+    position: relative;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: 992px) {
+        padding: 15px 0;
+    }
+}
+
+#opener-menu {
+    display: none;
+
+
+    &:checked {
+        ~.opener-menu {
+            span {
+                opacity: 0;
+            }
+            &:before {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            &:after {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+
+        ~.menu {
+            transform: translateX(0) scaleX(1);
+        }
+    }
+
+}
+
+.opener-menu {
+    position: relative;
+    display: block;
+    margin: 15px;
+    width: 35px;
+    height: 35px;
+
+    &:after, &:before, span {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 3px;
+        width: 36px;
+        background: $blue;
+        transition: all 1s linear;
+    }
+
+    &:before {
+        top: 20%;       
+    }
+
+    &:after {
+        top: 80%;
+    }
+
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu {
+    @extend %listreset;
+    padding: 5px 10px;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+    top: 100%;
+    right: 0;
+    background-color: $white;
+    transform: translateX(100%) scaleX(0);
+    transition: all .7s linear;
+    
+    @media (min-width: 768px) {
+        position: relative;
+        top: 0;
+        transform: translate(0);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    > li {
+        padding: 7px 0;
+
+        > a {
+            position: relative;
+            text-decoration: none;
+            color: $color-p;
+            font-family: $opensans-font;
+            font-weight: $semibold;
+            font-size: 14px;
+            transition: all .5s linear;
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 15%;
+                right: 15%;
+                border-bottom: 2px solid $blue;
+                transition: all .5s linear;
+                transform: scaleX(0);
+            }
+
+            &:hover { 
+                color: $blue;
+
+                &:before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            padding: 20px 0 20px 25px;
+        }
+    }
+}
